@@ -8,16 +8,6 @@ func If(condition bool, trueVal, falseVal interface{}) interface{} {
 	return falseVal
 }
 
-// Filter 筛选数组
-func Filter(slice []string, filter func(string) bool) (ret []string) {
-	for _, s := range slice {
-		if filter(s) {
-			ret = append(ret, s)
-		}
-	}
-	return
-}
-
 // ErrorCheck 错误检测
 func ErrorCheck(err error) {
 	if err != nil {
